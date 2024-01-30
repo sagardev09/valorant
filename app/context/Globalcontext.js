@@ -10,6 +10,7 @@ function GlobalProvider({ children }) {
 
     const [header, setheader] = useState({})
     const [homenews, sethomenews] = useState([])
+    const [hero, sethero] = useState({})
 
     const fetchapi = async () => {
         try {
@@ -17,7 +18,8 @@ function GlobalProvider({ children }) {
             const data = await res.json()
             setheader(data?.result?.data?.contentstackHomepage?.headerModule?.heroVideo[0])
             sethomenews(data.result.data.allContentstackArticles.nodes.slice(0, 3))
-            console.log(data.result.data.allContentstackArticles.nodes.slice(0, 3));
+            sethero(data?.result.data?.contentstackHomepage?.latestEpisodeOrAct)
+            console.log(data.result.data?.contentstackHomepage?.latestEpisodeOrAct);
         } catch (error) {
             console.log(error);
         }
@@ -30,7 +32,8 @@ function GlobalProvider({ children }) {
 
     const contextdata = {
         header,
-        homenews
+        homenews,
+        hero
     }
 
     return (

@@ -6,7 +6,7 @@ import { ChevronDown, Globe, Search } from 'lucide-react'
 
 const Navbar = () => {
     return (
-        <div className='sticky top-0 w-full flex items-center xl:gap-7  lg:gap-5 md:gap-4 sm:gap-3 justify-between bg-[#111111] p-3 px-4 text-white'>
+        <div className='sticky top-0 z-50 w-full flex items-center xl:gap-7  lg:gap-5 md:gap-4 sm:gap-3 justify-between bg-[#111111] p-3 px-4 text-white'>
             <div className='flex items-center xl:gap-6 lg:gap-4 md:gap-2 p-1'>
                 <div className='flex items-center gap-4'>
                     <Image className='h-10 w-20 object-contain ' src={logo} alt='' />

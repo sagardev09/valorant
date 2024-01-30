@@ -29,7 +29,7 @@ const News = () => {
     }
 
     return (
-        <div className='w-[70vw] mx-auto bg-[#ECE8E1] border-l-[0.5px] border-l-[#928F8B] border-r-[0.5px] border-r-[#928F8B] py-8 pb-20 relative z-10 '>
+        <div className='w-[70vw] mx-auto bg-[#ECE8E1] border-l-[0.5px] border-l-[#928F8B]  py-8 pb-20 relative z-10 '>
             <div className='absolute text-[200px] left-[-80px] top-[-70px] font-black uppercase '>
                 <span className='outlined-text'>
                     we are
@@ -39,6 +39,10 @@ const News = () => {
                 <span className='outlined-text'>
                     valorant
                 </span>
+            </div>
+            <div className='flex items-center gap-7 absolute left-[65%] translate-x-[-50%]'>
+                <span className='h-2 w-2 bg-[#FF4655]'></span>
+                <span className='h-2 w-2 bg-[#FF4655]'></span>
             </div>
             <div className='flex flex-col'>
                 <div className='flex items-start justify-between z-10'>

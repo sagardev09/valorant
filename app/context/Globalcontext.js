@@ -9,12 +9,15 @@ function GlobalProvider({ children }) {
     const api_url = "https://playvalorant.com/page-data/en-gb/page-data.json"
 
     const [header, setheader] = useState({})
+    const [homenews, sethomenews] = useState([])
 
     const fetchapi = async () => {
         try {
             const res = await fetch(api_url)
             const data = await res.json()
             setheader(data?.result?.data?.contentstackHomepage?.headerModule?.heroVideo[0])
+            sethomenews(data.result.data.allContentstackArticles.nodes.slice(0, 3))
+            console.log(data.result.data.allContentstackArticles.nodes.slice(0, 3));
         } catch (error) {
             console.log(error);
         }
@@ -26,7 +29,8 @@ function GlobalProvider({ children }) {
 
 
     const contextdata = {
-        header
+        header,
+        homenews
     }
 
     return (

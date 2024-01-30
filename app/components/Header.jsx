@@ -6,16 +6,27 @@ const Header = () => {
     const [showVideo, setShowVideo] = useState(true);
 
     const videoUrl = header?.video ? header?.video?.file?.url : header?.alternate_videos?.[0]?.file?.url;
-    const imageUrl = header?.static_image?.url; // Replace with the actual path to your image
-    console.log(showVideo ? videoUrl : imageUrl);
+    const imageUrl = header?.static_image?.url;
+
 
     const handleVideoEnd = () => {
         setShowVideo(false);
     };
+    if (!videoUrl) {
+        return (
+            <div className='flex items-center justify-center bg-gray-100 h-[650px] w-full'>
+                <div className='flex flex-col gap-4 items-center justify-center w-[600px]'>
+                    <div className='w-[50%] p-3 bg-gray-300 animate-pulse'></div>
+                    <div className='w-[80%] p-3 bg-gray-300 animate-pulse'></div>
+                    <div className='w-[20%] p-3 py-5 px-6 bg-gray-300 animate-pulse'></div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="relative w-full h-[650px]">
-            <div class="absolute left-0 bottom-0  w-[0] h-[0] border-solid border-transparent border-[30px] border-l-white border-b-white">
+            <div class="absolute left-0 bottom-0  w-[0] h-[0] border-solid border-transparent border-[30px] border-l-[#ECE8E1] border-b-[#ECE8E1]">
             </div>
             <div className='absolute border-l-[0.5px] border-l-white border-r-[0.5px] border-r-white  h-[100%] w-[70vw] left-1/2 transform -translate-x-1/2  top-0 '>
             </div>

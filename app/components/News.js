@@ -58,7 +58,7 @@ const News = () => {
                             return (
                                 <div key={item.id} className='h-[340px] flex flex-col gap-2 cursor-pointer'>
                                     <div className='image-container'>
-                                        <img src={item?.banner?.url} alt="" />
+                                        <img className='' src={item?.banner?.url} alt="" />
                                     </div>
                                     <div className='flex items-center gap-4'>
                                         <h5 className='text-xs text-[#0F1923] font-medium tracking-wider'>{new Intl.DateTimeFormat('en-GB').format(new Date(item.date))}</h5>

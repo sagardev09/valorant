@@ -1,4 +1,5 @@
 "use client"
+import Gameplay from "./components/Gameplay";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import News from "./components/News";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <News />
       <Hero />
+      <Gameplay />
     </main>
   );
 }

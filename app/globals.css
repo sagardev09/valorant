@@ -305,3 +305,10 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
 }
+
+.clip-path {
+  clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+  background-color: #ff4655;
+  height: 100px;
+  width: 270px;
+}

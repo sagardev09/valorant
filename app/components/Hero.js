@@ -8,6 +8,11 @@ const Hero = () => {
 
     return (
         <div className='relative w-screen h-[800px] '>
+
+            <span className='h-4 w-4 bg-[#FF4655] absolute left-[15vw] bottom-6'></span>
+            <span className='h-3 w-3 bg-[#FF4655] right-[15vw] bottom-0 absolute'></span>
+            <span className='h-1 rounded-sm w-28 bg-[#FF4655] right-[35vw] bottom-3 absolute'></span>
+
             <div className='absolute border-l-[0.5px] border-l-white  h-[100%] w-[70vw] left-1/2 transform -translate-x-1/2  top-0 '>
             </div>
             <img src={hero?.background?.url} className='w-full h-full object-cover' alt="" />

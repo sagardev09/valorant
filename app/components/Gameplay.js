@@ -8,7 +8,7 @@ const Gameplay = () => {
 
     return (
         <div className='h-full w-full relative'>
-            <div className='absolute left-0 bottom-[0px] clip-path'></div>
+            <div className='absolute left-0 bottom-[-1px] clip-path'></div>
             <div className='w-[70vw] mx-auto bg-[#ECE8E1] border-l-[0.5px] border-l-[#928F8B]   relative z-10  flex flex-col space-y-20 pt-10 pb-44'>
 
                 <span className='h-2 w-2 bg-[#FF4655] absolute left-0 top-[200px]'></span>

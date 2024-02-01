@@ -3,6 +3,7 @@ import Agents from "./components/Agents";
 import Gameplay from "./components/Gameplay";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import MapModule from "./components/MapModule";
 import News from "./components/News";
 
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <Gameplay />
       <Agents />
+      <MapModule />
     </main>
   );
 }

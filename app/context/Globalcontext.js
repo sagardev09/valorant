@@ -13,6 +13,7 @@ function GlobalProvider({ children }) {
     const [hero, sethero] = useState({})
     const [gameplay, setgameplay] = useState({})
     const [agentsdata, setagentsdata] = useState({})
+    const [homemap, sethomemap] = useState({})
 
     const fetchapi = async () => {
         try {
@@ -23,7 +24,8 @@ function GlobalProvider({ children }) {
             sethero(data?.result.data?.contentstackHomepage?.latestEpisodeOrAct)
             setgameplay(data?.result?.data?.contentstackHomepage?.gameplayModule)
             setagentsdata(data.result.data.contentstackHomepage.agentsModule)
-            console.log(data.result.data.contentstackHomepage.agentsModule);
+            sethomemap(data?.result?.data?.contentstackHomepage?.mapsModule)
+            console.log(data.result.data.contentstackHomepage.mapsModule);
         } catch (error) {
             console.log(error);
         }
@@ -39,7 +41,8 @@ function GlobalProvider({ children }) {
         homenews,
         hero,
         gameplay,
-        agentsdata
+        agentsdata,
+        homemap
     }
 
     return (

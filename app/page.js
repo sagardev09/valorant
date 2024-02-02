@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <Gameplay />
       <Agents />
-      <MapModule />
+      {/* <MapModule /> */}
     </main>
   );
 }

@@ -3,6 +3,7 @@ import logo from "@/public/logo.svg"
 import logosec from "@/public/logosec.svg"
 import Image from 'next/image'
 import { ChevronDown, Globe, Search } from 'lucide-react'
+import Link from 'next/link'
 
 const Navbar = () => {
     return (
@@ -24,11 +25,11 @@ const Navbar = () => {
                     <div className='group-hover:bg-red-500 transition-all 400ms ease-linear w-full  p-1 rounded-lg absolute bottom-[-18px]'></div>
                 </div>
                 <div className='cursor-pointer md:flex hidden flex-col group relative '>
-                    <div>
+                    <Link href={"/agents"}>
                         <h1 className='uppercase font-medium group xl:text-sm lg:text-xs md:text-[10px] hover:bg-[#ffffff7f] p-1 px-4 rounded-lg cursor-pointer'>
-                            media
+                            Agents
                         </h1>
-                    </div>
+                    </Link>
                     <div className='group-hover:bg-red-500 transition-all 400ms ease-linear w-full p-1 rounded-lg absolute bottom-[-18px]'></div>
                 </div>
                 <div className='cursor-pointer group md:flex hidden flex-col relative '>

@@ -14,6 +14,7 @@ function GlobalProvider({ children }) {
     const [gameplay, setgameplay] = useState({})
     const [agentsdata, setagentsdata] = useState({})
     const [homemap, sethomemap] = useState({})
+    const [agents, setagents] = useState([])
 
     const fetchapi = async () => {
         try {
@@ -31,6 +32,18 @@ function GlobalProvider({ children }) {
         }
     }
 
+
+    const fetchagents = async () => {
+        try {
+            const res = await fetch("https://valorant-api.com/v1/agents")
+            const data = await res.json()
+            setagents(data?.data)
+            console.log(data.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(() => {
         fetchapi()
     }, [])
@@ -42,7 +55,9 @@ function GlobalProvider({ children }) {
         hero,
         gameplay,
         agentsdata,
-        homemap
+        homemap,
+        fetchagents,
+        agents
     }
 
     return (

@@ -33,11 +33,11 @@ const Navbar = () => {
                     <div className='group-hover:bg-red-500 transition-all 400ms ease-linear w-full p-1 rounded-lg absolute bottom-[-18px]'></div>
                 </div>
                 <div className='cursor-pointer group md:flex hidden flex-col relative '>
-                    <div>
+                    <Link href={"/maps"}>
                         <h1 className='uppercase font-medium xl:text-sm lg:text-xs md:text-[10px] hover:bg-[#ffffff7f] p-1 px-4 rounded-lg cursor-pointer'>
-                            news
+                            Maps
                         </h1>
-                    </div>
+                    </Link>
                     <div className='group-hover:bg-red-500 transition-all 400ms ease-linear w-full p-1 rounded-lg absolute bottom-[-18px]'></div>
                 </div>
                 <div className='cursor-pointer md:flex hidden flex-col group relative '>

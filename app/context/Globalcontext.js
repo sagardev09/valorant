@@ -15,6 +15,7 @@ function GlobalProvider({ children }) {
     const [agentsdata, setagentsdata] = useState({})
     const [homemap, sethomemap] = useState({})
     const [agents, setagents] = useState([])
+    const [maps, setmaps] = useState([])
 
     const fetchapi = async () => {
         try {
@@ -38,6 +39,16 @@ function GlobalProvider({ children }) {
             const res = await fetch("https://valorant-api.com/v1/agents")
             const data = await res.json()
             setagents(data?.data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const fetchmaps = async () => {
+        try {
+            const res = await fetch("https://valorant-api.com/v1/maps")
+            const data = await res.json()
+            setmaps(data?.data)
             console.log(data.data);
         } catch (error) {
             console.log(error);
@@ -57,7 +68,10 @@ function GlobalProvider({ children }) {
         agentsdata,
         homemap,
         fetchagents,
-        agents
+        agents,
+        fetchmaps,
+        maps
+
     }
 
     return (
